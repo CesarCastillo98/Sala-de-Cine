@@ -41,7 +41,7 @@ def ver_sala():
     else:
         print("La sala no existe.")
         
- def asignar_puesto():
+def asignar_puesto():
     # Solicita al usuario el nombre de la sala donde quiere asignar el asiento
     nombre_sala = input("Ingrese el nombre de la sala: ")
     
