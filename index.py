@@ -12,7 +12,7 @@ def menu():
 def crear_sala():
     nombre_sala = input ("Ingrese el nombre de la sala: ")
     filas = int(input("Ingrese la cantidad de filas: "))
-    columnas = [['0' for _ in range(columnas)] for _ in range(filas)]
+    sala = [['0' for _ in range(columnas)] for _ in range(filas)]
 
     salas[nombre_sala] = salas
     print(f"Sala '{nombre_sala}' creada exitosamente.")
@@ -90,3 +90,24 @@ def asignar_puesto():
 
 
   
+# Bucle principal - Marilyn
+def main():
+    while True:
+        opcion = menu()
+        if opcion == '1':
+            crear_sala()
+        elif opcion == '2':
+            ver_sala()
+        elif opcion == '3':
+            asignar_puesto()
+        elif opcion == '4':
+            cargar_salas()
+        elif opcion == '5':
+            guardar_salas()
+            print("¡Hasta luego!")
+            break
+        else:
+            print("Opción no válida, intente de nuevo.")
+
+if __name__ == "__main__":
+    main()
