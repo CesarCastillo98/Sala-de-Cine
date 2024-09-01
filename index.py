@@ -17,7 +17,7 @@ def crear_sala():
     salas[nombre_sala] = salas
     print(f"Sala '{nombre_sala}' creada exitosamente.")
     
-    def ver_sala():
+def ver_sala():
     nombre_sala = input("Ingrese el nombre de la sala a visualizar: ")
     if nombre_sala in salas:
         sala = salas[nombre_sala]
