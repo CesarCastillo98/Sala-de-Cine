@@ -89,7 +89,26 @@ def asignar_puesto():
             print("El asiento ya está ocupado. Intente con otro.")  # Informa si el asiento está ocupado
     else:
         print("La sala no existe.")  # Informa si la sala no existe en el diccionario 'salas'
-     
+def guardar_salas():
+    with open("salas.json", "w") as archivo:
+        json.dump(salas, archivo, indent=4)
+    print("Salas guardadas exitosamente.")
+
+
+def cargar_salas():
+    global salas
+
+    if os.path.exists("salas.json"):
+        try:
+            with open("salas.json", "r") as archivo:
+                salas = json.load(archivo)
+            print("Salas cargadas exitosamente.")
+        except json.JSONDecodeError:
+            print("Error al cargar las salas. El archivo de datos puede estar dañado.")
+    else:
+        print("No hay datos guardados. Cree una sala primero.")
+
+
 
 
   
