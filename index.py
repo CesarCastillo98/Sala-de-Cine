@@ -12,6 +12,7 @@ def menu():
 def crear_sala():
     nombre_sala = input ("Ingrese el nombre de la sala: ")
     filas = int(input("Ingrese la cantidad de filas: "))
+    columnas = int(input("Ingrese la cantidad de columnas: "))
     sala = [['0' for _ in range(columnas)] for _ in range(filas)]
 
     salas[nombre_sala] = salas
